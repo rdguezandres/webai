@@ -1,0 +1,8 @@
+{
+  "name": "webai",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "875a6413"
+}
