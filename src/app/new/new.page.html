@@ -11,13 +11,12 @@
         <ion-img [src]="new.img"></ion-img>
       </ion-card>
     </div>
-  
+
     <ion-button (click)="toggleFavorite()" expand="full" [color]="isFavorite ? 'danger' : 'primary'">
       {{ isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos' }}
     </ion-button>
     <ion-button expand="full" color="success" routerLink="/favorites">
         Ir a favoritos
       </ion-button>
-  </ion-content>
-  
-  
+</ion-content>
+

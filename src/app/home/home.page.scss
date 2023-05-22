@@ -1,5 +1,25 @@
 ion-list {
-    background: url("/assets/img/logo_blur.png") no-repeat center center fixed;
-    background-size: cover;
+  background: url("/assets/img/logo_blur.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  padding: 10px;
+  //List item gap IONIC
+
+  ion-item {
+    //Ionic height
+    --min-height: 100px;
+    --max-height: 100px;
+    //Ionic background
+    --background: rgba(255, 255, 255, 0.25);
+    --background-hover: rgba(255, 255, 255, 0.5);
+    --border-radius: 10px;
+    --border-color: transparent;
+    --border-style: solid;
+    --border-width: 1px;
+    margin: 10px auto;
+
+    //Ionic margin
   }
-  
+}
+
+

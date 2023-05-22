@@ -9,15 +9,19 @@ import {Firestore, getFirestore, provideFirestore} from "@angular/fire/firestore
 import { HeaderComponent } from '../sharepages/header/header';
 import { FooterComponent } from '../sharepages/footer/footer';
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    MessageComponentModule,
-    HomePageRoutingModule,
-    
-    
-  ],
-  declarations: [HomePage,HeaderComponent,FooterComponent],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        MessageComponentModule,
+        HomePageRoutingModule,
+
+
+    ],
+    declarations: [HomePage, HeaderComponent, FooterComponent],
+  exports: [
+    FooterComponent,
+    HeaderComponent
+  ]
 })
 export class HomePageModule {}

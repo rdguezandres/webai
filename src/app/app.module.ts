@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 import { NewPage } from './new/new.page';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { FavoritesPage } from './fav/fav.page';
+import {HomePageModule} from "./home/home.module";
 
 
 
@@ -19,18 +20,18 @@ import { FavoritesPage } from './fav/fav.page';
 
 @NgModule({
   declarations: [AppComponent, NewPage, FavoritesPage],
-  imports: [BrowserModule, 
-    IonicModule.forRoot(), 
-    AppRoutingModule,
-    provideFirestore(() => getFirestore()),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    FormsModule,
-  ],
+    imports: [BrowserModule,
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        provideFirestore(() => getFirestore()),
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        FormsModule, HomePageModule,
+    ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     SQLite,
   ],
-  
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}
