@@ -1,12 +1,11 @@
 <ion-content>
     <ion-list>
-      <ion-item *ngFor="let favorite of favorites">
+      <ion-item *ngFor="let favorite of favorites" [routerLink]="'/new/' + favorite.id">
         <ion-thumbnail slot="start">
           <ion-img [src]="favorite.img"></ion-img>
         </ion-thumbnail>
         <ion-label>{{ favorite.title }}</ion-label>
       </ion-item>
     </ion-list>
-  </ion-content>
-  
-  
+</ion-content>
+

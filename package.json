@@ -33,7 +33,7 @@
     "@ionic/angular": "^7.0.0",
     "cordova-sqlite-storage": "^6.1.0",
     "ionicons": "^7.0.0",
-    "rxjs": "^7.4.0",
+    "rxjs": "^6.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

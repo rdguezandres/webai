@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { New } from "../interfaces/new";
+import { New } from "../../interfaces/new";
 import { ActivatedRoute } from "@angular/router";
-import { NewService } from "../services/news.service";
-import { FavoritesService } from "../services/favorites.service";
+import { NewService } from "../../services/news.service";
+import { FavoritesService } from "../../services/favorites.service";
 
 @Component({
   selector: 'app-new-page',
@@ -41,7 +41,7 @@ export class NewPage {
     }
     this.isFavorite = !this.isFavorite;
   }
-  
+
 }
 
 

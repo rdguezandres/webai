@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FavoritesService } from '../services/favorites.service';
-import { New } from '../interfaces/new';
+import { FavoritesService } from '../../services/favorites.service';
+import { New } from '../../interfaces/new';
 
 @Component({
   selector: 'app-favorites-page',

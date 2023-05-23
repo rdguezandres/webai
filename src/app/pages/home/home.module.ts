@@ -6,8 +6,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MessageComponentModule } from '../message/message.module';
 import {Firestore, getFirestore, provideFirestore} from "@angular/fire/firestore";
-import { HeaderComponent } from '../sharepages/header/header';
-import { FooterComponent } from '../sharepages/footer/footer';
+import { HeaderComponent } from '../../sharepages/header/header';
+import { FooterComponent } from '../../sharepages/footer/footer';
 @NgModule({
     imports: [
         CommonModule,

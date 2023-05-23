@@ -1,13 +1,18 @@
 <ion-footer class="footer">
   <ion-toolbar>
     <ion-buttons>
-      <button ion-button icon-only (click)="goToHome()">
-        <ion-icon name="home"></ion-icon>
-      </button>
-      <button class="news">
-        <ion-icon name="paper"></ion-icon>
-      </button>
-
+      <ion-button routerLink="/home">
+        <ion-img src="assets/icon/boton-de-inicio-para-la-interfaz.png"></ion-img>
+      </ion-button>
+      <ion-button routerLink="/home">
+        <ion-img src="assets/icon/periodico.png"></ion-img>
+      </ion-button>
+      <ion-button routerLink="/favorites">
+        <ion-img src="assets/icon/me-gusta.png"></ion-img>
+      </ion-button>
+      <ion-button routerLink="/who">
+        <ion-img src="assets/icon/grupo-de-usuarios.png"></ion-img>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>

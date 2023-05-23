@@ -9,11 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { initializeApp } from 'firebase/app';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { environment } from 'src/environments/environment';
-import { NewPage } from './new/new.page';
+import { NewPage } from './pages/new/new.page';
 import { SQLite } from '@ionic-native/sqlite/ngx';
-import { FavoritesPage } from './fav/fav.page';
-import {HomePageModule} from "./home/home.module";
-
+import { FavoritesPage } from './pages/fav/fav.page';
+import {HomePageModule} from "./pages/home/home.module";
 
 
 
