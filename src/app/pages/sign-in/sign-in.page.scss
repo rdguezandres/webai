@@ -1,0 +1,52 @@
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+  background-color: #f5f5f5;
+}
+
+ion-card {
+  max-width: 500px;
+  width: 100%;
+}
+
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    width: 100%;
+
+    ion-item {
+      margin-bottom: 10px;
+      ion-label {
+        color: #333;
+      }
+    }
+
+    ion-button {
+      margin-top: 20px;
+      & #signin-button {
+        background-color: #007bff;
+        color: #fff;
+      }
+      & #google-login-button {
+        background-color: #db4437;
+        color: #fff;
+      }
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+      margin-top: 20px;
+      a {
+        color: #007bff;
+        text-decoration: underline;
+      }
+    }
+  }
+}

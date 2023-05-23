@@ -1,0 +1,26 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sign Up</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" name="email" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" name="password" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input type="password" name="confirmPassword" ngModel required></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit">Join</ion-button>
+        <p>Or sign up with:</p>
+        <ion-button expand="full" color="danger" (click)="loginWithGoogle()">Google</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

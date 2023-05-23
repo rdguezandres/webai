@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-card *ngIf="userProfile" class="profile-container">
+    <ion-card-header>
+      <ion-img [src]="userProfile.img" alt="Profile image"></ion-img>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-title class="email">{{ user?.email }}</ion-card-title>
+
+      <ion-text class="bio-container">
+        <p>{{ userProfile.bio }}</p>
+        <ion-button fill="outline" (click)="editBio()" *ngIf="!editingBio">Editar</ion-button>
+        <div *ngIf="editingBio">
+          <ion-textarea [(ngModel)]="newBio" rows="4" cols="50"></ion-textarea>
+          <ion-button fill="outline" (click)="saveBio()">Guardar</ion-button>
+          <ion-button fill="outline" (click)="cancelEditing()">Cancelar</ion-button>
+        </div>
+      </ion-text>
+
+      <ion-button fill="outline" color="danger" (click)="logout()" class="logout">Logout</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

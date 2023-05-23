@@ -10,7 +10,7 @@
         <ion-img src="assets/img/header/search.png" alt="Search"></ion-img>
       </ion-button>
       <ion-button>
-        <ion-img src="assets/img/header/profile.png" alt="Profile"></ion-img>
+        <ion-img src="assets/img/header/profile.png" alt="Profile" [routerLink]="isAuthenticated ? '/profile' : '/sign-in'"></ion-img>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>

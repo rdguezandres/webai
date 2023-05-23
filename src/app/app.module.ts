@@ -13,6 +13,7 @@ import { NewPage } from './pages/new/new.page';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { FavoritesPage } from './pages/fav/fav.page';
 import {HomePageModule} from "./pages/home/home.module";
+import {getAuth, provideAuth} from "@angular/fire/auth";
 
 
 
@@ -25,6 +26,8 @@ import {HomePageModule} from "./pages/home/home.module";
         provideFirestore(() => getFirestore()),
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         FormsModule, HomePageModule,
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
     ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
