@@ -12,18 +12,19 @@ export class SignUpPage {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      const { email, password, confirmPassword } = form.value;
-
+      const { email, password, confirmPassword, firstName, lastName } = form.value;
+  
       if (password !== confirmPassword) {
         alert('Passwords do not match');
         return;
       }
-
-      this.authService.register({ email, password })
+  
+      this.authService.register({ email, password, firstName, lastName })
         .then(() => this.router.navigate(['/home']))
         .catch((error: { message: any; }) => alert(error.message));
     }
   }
+  
 
   loginWithGoogle() {
     this.authService.loginWithGoogle()

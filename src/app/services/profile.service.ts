@@ -1,17 +1,15 @@
-// profile.service.ts
-import {Injectable} from '@angular/core';
-import {Firestore, doc, getDoc, updateDoc} from '@angular/fire/firestore';
-import {Observable, of} from 'rxjs';
-import {switchMap, map} from 'rxjs/operators';
-import {AuthService} from './auth.service';
-import {UserProfile} from "../interfaces/profile";
+import { Injectable } from '@angular/core';
+import { Firestore, doc, getDoc, updateDoc } from '@angular/fire/firestore';
+import { Observable, of } from 'rxjs';
+import { switchMap, map } from 'rxjs/operators';
+import { AuthService } from './auth.service';
+import { UserProfile } from "../interfaces/profile";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
-  constructor(private authService: AuthService, private firestore: Firestore) {
-  }
+  constructor(private authService: AuthService, private firestore: Firestore) {}
 
   getUserProfile(): Observable<UserProfile | null> {
     return this.authService.user$.pipe(
@@ -40,6 +38,6 @@ export class ProfileService {
 
   updateBio(uid: string, newBio: string): Promise<void> {
     const profileDocRef = doc(this.firestore, 'profiles', uid);
-    return updateDoc(profileDocRef, {bio: newBio});
+    return updateDoc(profileDocRef, { bio: newBio });
   }
 }

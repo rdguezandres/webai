@@ -1,11 +1,9 @@
-// profile.component.ts
-import {Component, OnInit} from '@angular/core';
-import {ProfileService} from 'src/app/services/profile.service';
-import {AuthService} from 'src/app/services/auth.service';
-import {UserProfile} from '../../interfaces/profile';
-import {User} from '@angular/fire/auth';
-import {Router} from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
+import { ProfileService } from 'src/app/services/profile.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { UserProfile } from '../../interfaces/profile';
+import { User } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -18,13 +16,11 @@ export class ProfilePage implements OnInit {
   editingBio: boolean = false;
   newBio: string = '';
 
-
   constructor(
     private profileService: ProfileService,
     private authService: AuthService,
     private router: Router,
-  ) {
-  }
+  ) { }
 
   ngOnInit(): void {
     this.profileService.getUserProfile().subscribe((profile) => {
@@ -44,7 +40,7 @@ export class ProfilePage implements OnInit {
   async saveBio(): Promise<void> {
     if (this.user && this.newBio !== this.userProfile?.bio) {
       await this.profileService.updateBio(this.user.uid, this.newBio);
-      this.userProfile = {...this.userProfile!, bio: this.newBio};
+      this.userProfile = { ...this.userProfile!, bio: this.newBio };
     }
     this.editingBio = false;
   }

@@ -17,6 +17,14 @@
           <ion-label position="floating">Confirm Password</ion-label>
           <ion-input type="password" name="confirmPassword" ngModel required></ion-input>
         </ion-item>
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input type="text" name="firstName" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input type="text" name="lastName" ngModel required></ion-input>
+        </ion-item>
         <ion-button expand="full" type="submit">Join</ion-button>
         <p>Or sign up with:</p>
         <ion-button expand="full" color="danger" (click)="loginWithGoogle()">Google</ion-button>
@@ -24,3 +32,4 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+

@@ -70,26 +70,29 @@ export class AuthService {
     return signOut(this.auth);
   }
 
-  register({email, password}: any) {
-    return createUserWithEmailAndPassword(this.auth, email, password).then(async (result) => {
-      const {user} = result;
-      if (user) {
-        const defaultBio = 'My biography';
-        const defaultProfileImg = 'assets/img/Default_Profile_Picture.svg.png';
-
-        const profilesCollection = collection(this.firestore, 'profiles');
-        const profileDocRef = doc(profilesCollection, user.uid);
-        await setDoc(profileDocRef, {
-          bio: defaultBio,
-          img: defaultProfileImg,
-        });
-
-        return result;
-      } else {
-        throw new Error('Error al registrar el usuario');
-      }
-    });
+  register({ email, password, firstName, lastName }: any) {
+    return createUserWithEmailAndPassword(this.auth, email, password)
+      .then(async (result) => {
+        const { user } = result;
+        if (user) {
+          const defaultBio = 'My biography';
+          const defaultProfileImg = 'assets/img/Default_Profile_Picture.svg.png';
+  
+          const profilesCollection = collection(this.firestore, 'profiles');
+          const profileDocRef = doc(profilesCollection, user.uid);
+  
+          await setDoc(profileDocRef, {
+            firstName: firstName,
+            lastName: lastName,
+            bio: defaultBio,
+            img: defaultProfileImg,
+          });
+  
+          return result;
+        } else {
+          throw new Error('Error al registrar el usuario');
+        }
+      });
   }
-
-}
+}  
 

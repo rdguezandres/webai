@@ -6,7 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.page.html',
-  styleUrls: ['./sign-in.page.css'],
+  styleUrls: ['./sign-in.page.scss'],
 })
 export class SignInPage {
   constructor(private authService: AuthService, private router: Router) {}
